@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <style>
+    /* Styles here (same as before) */
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Admin Login</h1>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <script>
+    // Check if the user is already logged in as admin
+    if (localStorage.getItem('isAdmin') === 'true') {
+      window.location.href = 'dashboard.html'; // Redirect if already logged in
+    }
+
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Simple admin check (you can enhance this with real authentication)
+      if (username === 'admin' && password === 'password') {
+        // Store login status in localStorage
+        localStorage.setItem('isAdmin', 'true');
+        window.location.href = 'dashboard.html'; // Redirect to the dashboard
+      } else {
+        alert('Invalid username or password');
+      }
+    }
+  </script>
+</body>
+</html>

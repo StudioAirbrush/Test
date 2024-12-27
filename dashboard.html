@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <style>
+    /* Styles here (same as before) */
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>Admin Dashboard</h1>
+    <h3>Product Management</h3>
+    <ul>
+      <li>
+        <span>Product 1</span>
+        <button>Edit</button>
+      </li>
+      <li>
+        <span>Product 2</span>
+        <button>Edit</button>
+      </li>
+      <li>
+        <span>Product 3</span>
+        <button>Edit</button>
+      </li>
+    </ul>
+    <button class="logout-btn" onclick="logout()">Log Out</button>
+  </div>
+
+  <script>
+    // Check if the user is logged in as admin
+    if (localStorage.getItem('isAdmin') !== 'true') {
+      window.location.href = 'login.html'; // Redirect to login if not logged in as admin
+    }
+
+    function logout() {
+      localStorage.removeItem('isAdmin');
+      window.location.href = 'index.html'; // Redirect to homepage after logging out
+    }
+  </script>
+</body>
+</html>

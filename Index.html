@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern E-commerce</title>
+  <style>
+    /* Styles here (same as before) */
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <h1>E-Commerce</h1>
+    <ul>
+      <li>Home</li>
+      <li>Shop</li>
+      <li>Contact</li>
+      <!-- Admin Link shown only when logged in as Admin -->
+      <li id="admin-link" style="display: none;"><a href="login.html">Admin Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Modern Shopping</h1>
+    <p>Find the best deals and exclusive products here!</p>
+    <button>Shop Now</button>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>$10 - $20</p>
+      <button>Buy Now</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200" alt="Product 2">
+      <h3>Product 2</h3>
+      <p>$15 - $25</p>
+      <button>Buy Now</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200" alt="Product 3">
+      <h3>Product 3</h3>
+      <p>$20 - $30</p>
+      <button>Buy Now</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Modern E-commerce | Built with ❤️</p>
+    <p>Contact us: <a href="mailto:rpaban89@gmail.com">rpaban89@gmail.com</a></p>
+  </footer>
+
+  <script>
+    // Show the Admin Link only if the user is logged in as an admin
+    if (localStorage.getItem('isAdmin') === 'true') {
+      document.getElementById('admin-link').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
